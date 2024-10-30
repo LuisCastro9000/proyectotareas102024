@@ -1,0 +1,21 @@
+<!-- configuraciones agregar .env con las credenciales de la base de datos -->
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=bdtareas
+DB_USERNAME=root
+DB_PASSWORD=
+
+<!-- Script de la base de datos -->
+
+CREATE TABLE `tareas` (
+  `IdTarea` int(11) NOT NULL,
+  `DNI` varchar(8) NOT NULL,
+  `Titulo` varchar(150) NOT NULL,
+  `Descripcion` varchar(500) NOT NULL,
+  `FechaVencimiento` date NOT NULL,
+  `FechaCreacion` date NOT NULL,
+  `Estado` varchar(50) NOT NULL,
+  `Activo` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
